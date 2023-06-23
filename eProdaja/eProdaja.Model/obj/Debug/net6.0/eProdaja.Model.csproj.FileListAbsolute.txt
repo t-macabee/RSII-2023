@@ -1,0 +1,12 @@
+C:\RSII-2023\eProdaja\eProdaja.Model\bin\Debug\net6.0\eProdaja.Model.deps.json
+C:\RSII-2023\eProdaja\eProdaja.Model\bin\Debug\net6.0\eProdaja.Model.dll
+C:\RSII-2023\eProdaja\eProdaja.Model\bin\Debug\net6.0\eProdaja.Model.pdb
+C:\RSII-2023\eProdaja\eProdaja.Model\obj\Debug\net6.0\eProdaja.Model.csproj.AssemblyReference.cache
+C:\RSII-2023\eProdaja\eProdaja.Model\obj\Debug\net6.0\eProdaja.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\RSII-2023\eProdaja\eProdaja.Model\obj\Debug\net6.0\eProdaja.Model.AssemblyInfoInputs.cache
+C:\RSII-2023\eProdaja\eProdaja.Model\obj\Debug\net6.0\eProdaja.Model.AssemblyInfo.cs
+C:\RSII-2023\eProdaja\eProdaja.Model\obj\Debug\net6.0\eProdaja.Model.csproj.CoreCompileInputs.cache
+C:\RSII-2023\eProdaja\eProdaja.Model\obj\Debug\net6.0\eProdaja.Model.dll
+C:\RSII-2023\eProdaja\eProdaja.Model\obj\Debug\net6.0\refint\eProdaja.Model.dll
+C:\RSII-2023\eProdaja\eProdaja.Model\obj\Debug\net6.0\eProdaja.Model.pdb
+C:\RSII-2023\eProdaja\eProdaja.Model\obj\Debug\net6.0\ref\eProdaja.Model.dll
