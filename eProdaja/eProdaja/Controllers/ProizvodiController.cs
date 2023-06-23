@@ -4,21 +4,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eProdaja.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class ProizvodiController : ControllerBase
-    {
-        public IProizvodiService proizvodiService { get; set; }
+    //public class ProizvodiController : BaseAPIController
+    //{
+    //    private IProizvodiService proizvodiService;
 
-        public ProizvodiController(IProizvodiService proizvodiService)
-        {
-            this.proizvodiService = proizvodiService;
-        }
+    //    public ProizvodiController(IProizvodiService proizvodiService)
+    //    {
+    //        this.proizvodiService = proizvodiService;
+    //    }
 
-        [HttpGet()]
-        public IEnumerable<Proizvodi> Get()
-        {
-            return proizvodiService.Get();
-        }
-    }
+    //    [HttpGet()]
+    //    public IEnumerable<Proizvodi> Get()
+    //    {
+    //        return proizvodiService.Get();
+    //    }
+    //}
 }

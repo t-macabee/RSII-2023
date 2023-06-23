@@ -1,21 +1,30 @@
 ﻿using eProdaja.Model;
+using eProdaja.Services.Database;
 using eProdaja.Services.Interfaces;
 
 namespace eProdaja.Services.Services
 {
     public class ProizvodiService : IProizvodiService
     {
-        List<Proizvodi> proizvodi = new List<Proizvodi>()
+        private EProdajaContext context;
+
+        public ProizvodiService(EProdajaContext context)
         {
-            new Proizvodi()
+            this.context = context;
+        }
+
+        List<Model.Proizvodi> proizvodi = new List<Model.Proizvodi>()
+        {
+            new Model.Proizvodi()
             {
                 ProizvoidId = 1,
                 Naziv = "Test"
             }
-        };
+        };        
 
-        public IList<Proizvodi> Get()
+        public IList<Model.Proizvodi> Get()
         {
+            var list = context.Proizvodis.ToList();
             return proizvodi;
         }
     }
