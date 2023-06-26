@@ -89,3 +89,5 @@ C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\refint\eProdaja.dll
 C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\eProdaja.pdb
 C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\eProdaja.genruntimeconfig.cache
 C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\ref\eProdaja.dll
+C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\AutoMapper.dll
+C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

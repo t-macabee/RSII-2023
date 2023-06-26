@@ -21,6 +21,8 @@ builder.Services.AddDbContext<EProdajaContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
+builder.Services.AddAutoMapper(typeof(IKorisniciService));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
