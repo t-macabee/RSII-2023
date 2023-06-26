@@ -2,6 +2,7 @@
 using eProdaja.Model.Requests;
 using eProdaja.Services.Database;
 using eProdaja.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,9 @@ namespace eProdaja.Services.Services
             this.mapper = mapper;
         }
 
-        public List<Model.Korisnici> Get()
+        public async Task<List<Model.Korisnici>> Get()
         {
-            var entityList = context.Korisnicis.ToList();   
+            var entityList = await context.Korisnicis.ToListAsync();   
             return mapper.Map<List<Model.Korisnici>>(entityList);
         }
 

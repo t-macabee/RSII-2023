@@ -9,6 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<IProizvodiService, ProizvodiService>();
 builder.Services.AddTransient<IKorisniciService, KorisniciService>();
+builder.Services.AddTransient<IJediniceMjereService, JediniceMjereService>();
+builder.Services.AddTransient<IService<eProdaja.Model.VrsteProizvoda>,
+    BaseService<eProdaja.Model.VrsteProizvoda, 
+    eProdaja.Services.Database.VrsteProizvodum>>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

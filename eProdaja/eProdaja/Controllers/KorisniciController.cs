@@ -5,31 +5,33 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eProdaja.Controllers
 {
-    public class KorisniciController : BaseAPIController
-    {
-        private IKorisniciService korisniciService;
+    //[ApiController]
+    //[Route("[controller]")]
+    //public class KorisniciController : BaseController<Model.Korisnici>
+    //{
+    //    private IKorisniciService korisniciService;
 
-        public KorisniciController(IKorisniciService korisniciService)
-        {
-            this.korisniciService = korisniciService;
-        }
+    //    public KorisniciController(IKorisniciService korisniciService)
+    //    {
+    //        this.korisniciService = korisniciService;
+    //    }
 
-        [HttpGet()]
-        public IEnumerable<Model.Korisnici> Get()
-        {
-            return korisniciService.Get();
-        }
+    //    [HttpGet()]
+    //    public async Task<IEnumerable<Model.Korisnici>> Get()
+    //    {
+    //        return await korisniciService.Get();
+    //    }
 
-        [HttpPost()]
-        public Model.Korisnici Insert(KorisniciInsertRequest request)
-        {
-            return korisniciService.Insert(request);
-        }
+    //    [HttpPost()]
+    //    public Model.Korisnici Insert(KorisniciInsertRequest request)
+    //    {
+    //        return korisniciService.Insert(request);
+    //    }
 
-        [HttpPut("{id}")]
-        public Model.Korisnici Update(int id, KorisniciUpdateRequest request)
-        {
-            return korisniciService.Update(id, request);
-        }
-    }
+    //    [HttpPut("{id}")]
+    //    public Model.Korisnici Update(int id, KorisniciUpdateRequest request)
+    //    {
+    //        return korisniciService.Update(id, request);
+    //    }
+    //}
 }
