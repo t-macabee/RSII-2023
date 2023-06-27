@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Model.SearchObjects
 {
-    public class JediniceMjereSearchObject : BaseSearchObject
+    public class BaseSearchObject
     {
-        public string? Naziv { get; set; }
-        public string? FTS { get; set; }
-
+        public int? Page { get; set; }
+        public int? PageSize { get; set; }
     }
 }

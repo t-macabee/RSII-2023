@@ -1,3 +1,4 @@
+using eProdaja.Model.SearchObjects;
 using eProdaja.Services.Database;
 using eProdaja.Services.Interfaces;
 using eProdaja.Services.Services;
@@ -10,9 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<IProizvodiService, ProizvodiService>();
 builder.Services.AddTransient<IKorisniciService, KorisniciService>();
 builder.Services.AddTransient<IJediniceMjereService, JediniceMjereService>();
-builder.Services.AddTransient<IService<eProdaja.Model.VrsteProizvoda, object>,
+builder.Services.AddTransient<IService<eProdaja.Model.VrsteProizvoda, BaseSearchObject>,
     BaseService<eProdaja.Model.VrsteProizvoda, 
-    eProdaja.Services.Database.VrsteProizvodum, object>>();
+    eProdaja.Services.Database.VrsteProizvodum, BaseSearchObject>>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
