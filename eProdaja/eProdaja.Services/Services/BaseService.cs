@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services.Services
 {
-    public class BaseService<T, TDb> : IService<T> where T : class where TDb : class
+    public class BaseService<T, TDb, TSearch> : IService<T, TSearch> where T : class where TDb : class where TSearch : class
     {
-        private EProdajaContext context;
-        public IMapper mapper;
+        protected EProdajaContext context;
+        protected IMapper mapper;
 
         public BaseService(EProdajaContext context, IMapper mapper)
         {
@@ -21,20 +21,27 @@ namespace eProdaja.Services.Services
             this.mapper = mapper;
         }
 
-        public async Task<List<T>> Get()
+        public virtual async Task<List<T>> Get(TSearch? search = null)
         {
             var query = context.Set<TDb>().AsQueryable();
+
+            query = AddFilter(query, search);
 
             var list = await query.ToListAsync();
 
             return mapper.Map<List<T>>(list);
         }
 
-        public async Task<T> GetById(int id)
+        public virtual async Task<T> GetById(int id)
         {
             var entity = await context.Set<TDb>().FindAsync(id);
 
             return mapper.Map<T>(entity);
+        }
+
+        public virtual IQueryable<TDb> AddFilter(IQueryable<TDb> query, TSearch? search = null)
+        {
+            return query;
         }
     }
 }

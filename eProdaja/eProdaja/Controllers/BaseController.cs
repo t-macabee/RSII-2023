@@ -4,19 +4,19 @@ using Microsoft.Identity.Client;
 
 namespace eProdaja.Controllers
 {    
-    public class BaseController<T> : ControllerBase where T : class
+    public class BaseController<T, TSearch> : ControllerBase where T : class where TSearch : class
     {
-        private IService<T> service;
+        private IService<T, TSearch> service;
 
-        public BaseController(IService<T> service)
+        public BaseController(IService<T, TSearch> service)
         {
             this.service = service;
         }
 
         [HttpGet()]
-        public async Task<IEnumerable<T>> Get()
+        public async Task<IEnumerable<T>> Get([FromQuery]TSearch? search = null)
         {
-            return await service.Get();
+            return await service.Get(search);
         }
 
         [HttpGet("{id}")]

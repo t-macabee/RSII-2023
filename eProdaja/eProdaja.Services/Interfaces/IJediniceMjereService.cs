@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using eProdaja.Model.SearchObjects;
 
 namespace eProdaja.Services.Interfaces
 {
-    public interface IJediniceMjereService : IService<Model.JediniceMjere>
+    public interface IJediniceMjereService : IService<Model.JediniceMjere, JediniceMjereSearchObject>
     {
         
     }
