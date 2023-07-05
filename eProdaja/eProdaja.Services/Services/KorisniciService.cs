@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using eProdaja.Model.Requests;
+using eProdaja.Model.SearchObjects;
 using eProdaja.Services.Database;
 using eProdaja.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -12,22 +13,13 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services.Services
 {
-    public class KorisniciService : IKorisniciService
+    public class KorisniciService : BaseService<Model.Korisnici, Database.Korisnici, KorisniciSearchObject>, IKorisniciService
     {
-        private EProdajaContext context;
-        public IMapper mapper;
 
-        public KorisniciService(EProdajaContext context, IMapper mapper)
+        public KorisniciService(EProdajaContext context, IMapper mapper) : base(context, mapper)
         {
-            this.context = context;
-            this.mapper = mapper;
-        }
-
-        public async Task<List<Model.Korisnici>> Get()
-        {
-            var entityList = await context.Korisnicis.ToListAsync();   
-            return mapper.Map<List<Model.Korisnici>>(entityList);
-        }
+            
+        }        
 
         public Model.Korisnici Insert(KorisniciInsertRequest request)
         {
