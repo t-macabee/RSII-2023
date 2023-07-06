@@ -1,9 +1,11 @@
 ﻿using eProdaja.Model;
+using eProdaja.Model.Requests.ProizvodiRequests;
+using eProdaja.Model.SearchObjects;
 
 namespace eProdaja.Services.Interfaces
 {
-    public interface IProizvodiService
+    public interface IProizvodiService : ICRUDService<Proizvodi, ProizvodiSearchObject, ProizvodiInsertRequest, ProizvodiUpdateRequest>
     {
-        IList<Proizvodi> Get();
+        
     }
 }

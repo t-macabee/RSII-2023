@@ -8,10 +8,12 @@ namespace eProdaja.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class JediniceMjereController : BaseController<Model.JediniceMjere, JediniceMjereSearchObject>
+    public class JediniceMjereController : BaseController<JediniceMjere, JediniceMjereSearchObject>
     {
         public JediniceMjereController(IJediniceMjereService service) : base(service)
         {
         }
+
+       
     }
 }

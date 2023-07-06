@@ -1,31 +1,15 @@
-﻿using eProdaja.Model;
+﻿using AutoMapper;
+using eProdaja.Model.Requests.ProizvodiRequests;
+using eProdaja.Model.SearchObjects;
 using eProdaja.Services.Database;
 using eProdaja.Services.Interfaces;
 
 namespace eProdaja.Services.Services
 {
-    public class ProizvodiService : IProizvodiService
+    public class ProizvodiService : BaseCRUDService<Model.Proizvodi, Database.Proizvodi, ProizvodiSearchObject, ProizvodiInsertRequest, ProizvodiUpdateRequest>, IProizvodiService
     {
-        private EProdajaContext context;
-
-        public ProizvodiService(EProdajaContext context)
+        public ProizvodiService(EProdajaContext context, IMapper mapper) : base(context, mapper)
         {
-            this.context = context;
-        }
-
-        List<Model.Proizvodi> proizvodi = new List<Model.Proizvodi>()
-        {
-            new Model.Proizvodi()
-            {
-                ProizvoidId = 1,
-                Naziv = "Test"
-            }
-        };        
-
-        public IList<Model.Proizvodi> Get()
-        {
-            var list = context.Proizvodis.ToList();
-            return proizvodi;
         }
     }
 }

@@ -1,40 +1,23 @@
 ﻿using AutoMapper;
-using eProdaja.Model.Requests;
+using eProdaja.Model.Requests.KorisniciRequests;
 using eProdaja.Model.SearchObjects;
 using eProdaja.Services.Database;
 using eProdaja.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace eProdaja.Services.Services
 {
-    public class KorisniciService : BaseService<Model.Korisnici, Database.Korisnici, KorisniciSearchObject>, IKorisniciService
+    public class KorisniciService : BaseCRUDService<Model.Korisnici, Database.Korisnici, KorisniciSearchObject, KorisniciInsertRequest, KorisniciUpdateRequest>, IKorisniciService
     {
-
-        public KorisniciService(EProdajaContext context, IMapper mapper) : base(context, mapper)
+        public KorisniciService(EProdajaContext context, IMapper mapper) : base(context, mapper) { }
+      
+        public override Task<Model.Korisnici> Insert(KorisniciInsertRequest insert)
         {
-            
-        }        
-
-        public Model.Korisnici Insert(KorisniciInsertRequest request)
-        {
-            var entity = new Korisnici();
-            mapper.Map(request, entity);
-
-            entity.LozinkaSalt = GenerateSalt();
-            entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Password);
-
-            context.Korisnicis.Add(entity);
-            context.SaveChanges();
-
-            return mapper.Map<Model.Korisnici>(entity);
+            return base.Insert(insert);
         }
-
+      
         public Model.Korisnici Update(int id, KorisniciUpdateRequest request)
         {
             var entity = context.Korisnicis.Find(id);
@@ -42,6 +25,21 @@ namespace eProdaja.Services.Services
 
             context.SaveChanges();
             return mapper.Map<Model.Korisnici>(entity);
+        }
+
+        public override IQueryable<Korisnici> AddInclude(IQueryable<Korisnici> query, KorisniciSearchObject? search = null)
+        {
+            if(search?.IsUlogeIncluded == true)
+            {
+                query = query.Include("KorisniciUloges.Uloga");
+            }
+            return base.AddInclude(query, search);
+        }
+
+        public override async Task BeforeInsert(Korisnici entity, KorisniciInsertRequest insert)
+        {
+            entity.LozinkaSalt = GenerateSalt();
+            entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, insert.Password);
         }
 
         public static string GenerateSalt()

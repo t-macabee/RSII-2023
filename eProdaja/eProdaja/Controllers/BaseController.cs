@@ -7,7 +7,7 @@ namespace eProdaja.Controllers
 {    
     public class BaseController<T, TSearch> : ControllerBase where T : class where TSearch : class
     {
-        private IService<T, TSearch> service;
+        protected IService<T, TSearch> service;
 
         public BaseController(IService<T, TSearch> service)
         {

@@ -1,3 +1,4 @@
+using eProdaja.Model;
 using eProdaja.Model.SearchObjects;
 using eProdaja.Services.Database;
 using eProdaja.Services.Interfaces;
@@ -11,8 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<IProizvodiService, ProizvodiService>();
 builder.Services.AddTransient<IKorisniciService, KorisniciService>();
 builder.Services.AddTransient<IJediniceMjereService, JediniceMjereService>();
-builder.Services.AddTransient<IService<eProdaja.Model.VrsteProizvoda, BaseSearchObject>,
-    BaseService<eProdaja.Model.VrsteProizvoda, 
+builder.Services.AddTransient<IService<VrsteProizvoda, BaseSearchObject>,
+    BaseService<VrsteProizvoda, 
     eProdaja.Services.Database.VrsteProizvodum, BaseSearchObject>>();
 
 builder.Services.AddControllers();

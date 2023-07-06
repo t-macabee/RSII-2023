@@ -11,6 +11,8 @@ C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\eProdaja.deps.json
 C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\eProdaja.runtimeconfig.json
 C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\eProdaja.dll
 C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\eProdaja.pdb
+C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\AutoMapper.dll
+C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\Azure.Core.dll
 C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\Azure.Identity.dll
 C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\Humanizer.dll
@@ -74,7 +76,6 @@ C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\eProdaja.Model.dll
 C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\eProdaja.Services.dll
 C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\eProdaja.Model.pdb
 C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\eProdaja.Services.pdb
-C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\eProdaja.MvcApplicationPartsAssemblyInfo.cs
 C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\staticwebassets\msbuild.eProdaja.Microsoft.AspNetCore.StaticWebAssets.props
 C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\staticwebassets\msbuild.build.eProdaja.props
 C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.eProdaja.props
@@ -89,5 +90,3 @@ C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\refint\eProdaja.dll
 C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\eProdaja.pdb
 C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\eProdaja.genruntimeconfig.cache
 C:\RSII-2023\eProdaja\eProdaja\obj\Debug\net6.0\ref\eProdaja.dll
-C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\AutoMapper.dll
-C:\RSII-2023\eProdaja\eProdaja\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

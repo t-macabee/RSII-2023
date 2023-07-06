@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using eProdaja.Model;
+using eProdaja.Model.Requests.KorisniciRequests;
+using eProdaja.Model.Requests.ProizvodiRequests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +14,22 @@ namespace eProdaja.Services
     {
         public MappingProfile() 
         {
-            CreateMap<Database.Korisnici, Model.Korisnici>();
-            CreateMap<Model.Requests.KorisniciInsertRequest, Database.Korisnici>();
-            CreateMap<Model.Requests.KorisniciUpdateRequest, Database.Korisnici>();
+            CreateMap<Database.Korisnici, Korisnici>();
+            CreateMap<KorisniciInsertRequest, Database.Korisnici>();
+            CreateMap<KorisniciUpdateRequest, Database.Korisnici>();
 
-            CreateMap<Database.JediniceMjere, Model.JediniceMjere>();
+            CreateMap<Database.Proizvodi, Proizvodi>();
+            CreateMap<ProizvodiInsertRequest, Database.Proizvodi>();
+            CreateMap<ProizvodiUpdateRequest, Database.Proizvodi>();
 
-            CreateMap<Database.VrsteProizvodum, Model.VrsteProizvoda>();
-        }        
+            CreateMap<Database.JediniceMjere, JediniceMjere>();
+
+            CreateMap<Database.VrsteProizvodum, VrsteProizvoda>();
+
+            CreateMap<Database.KorisniciUloge, KorisniciUloge>();
+
+            CreateMap<Database.Uloge, Uloge>();
+        }           
     }
 
 }

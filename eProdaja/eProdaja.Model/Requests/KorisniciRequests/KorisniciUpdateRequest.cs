@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eProdaja.Model.Requests
+namespace eProdaja.Model.Requests.KorisniciRequests
 {
-    public class KorisniciInsertRequest
-    {       
+    public class KorisniciUpdateRequest
+    {
         public string Ime { get; set; } = null!;
 
         public string Prezime { get; set; } = null!;
@@ -16,12 +16,6 @@ namespace eProdaja.Model.Requests
 
         public string? Telefon { get; set; }
 
-        public string KorisnickoIme { get; set; } = null!;
-
         public bool? Status { get; set; }
-
-        public string Password { get; set; }
-
-        public string PasswordPotvrda { get; set; }
     }
 }

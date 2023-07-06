@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using eProdaja.Model;
 using eProdaja.Model.SearchObjects;
 using eProdaja.Services.Database;
 using eProdaja.Services.Interfaces;

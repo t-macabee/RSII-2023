@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eProdaja.Model.Requests
+namespace eProdaja.Model.Requests.KorisniciRequests
 {
-    public class KorisniciUpdateRequest
+    public class KorisniciInsertRequest
     {
         public string Ime { get; set; } = null!;
 
@@ -14,8 +14,14 @@ namespace eProdaja.Model.Requests
 
         public string? Email { get; set; }
 
-        public string? Telefon { get; set; }        
+        public string? Telefon { get; set; }
+
+        public string KorisnickoIme { get; set; } = null!;
 
         public bool? Status { get; set; }
+
+        public string Password { get; set; }
+
+        public string PasswordPotvrda { get; set; }
     }
 }
