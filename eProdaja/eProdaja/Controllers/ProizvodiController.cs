@@ -12,6 +12,12 @@ namespace eProdaja.Controllers
     [Route("[controller]")]
     public class ProizvodiController : BaseCRUDController<Proizvodi, ProizvodiSearchObject, ProizvodiInsertRequest, ProizvodiUpdateRequest>
     {
-        public ProizvodiController(IProizvodiService service) : base(service) { }  
+        public ProizvodiController(IProizvodiService service) : base(service) { }
+
+        [HttpPut("{id}/activate")]
+        public virtual async Task<Model.Proizvodi> Activate(int id)
+        {
+            return await (service as IProizvodiService).Activate(id);
+        }
     }
 }

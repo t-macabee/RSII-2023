@@ -20,7 +20,7 @@ namespace eProdaja.Services
 
             CreateMap<Database.Proizvodi, Proizvodi>();
             CreateMap<ProizvodiInsertRequest, Database.Proizvodi>();
-            CreateMap<ProizvodiUpdateRequest, Database.Proizvodi>();
+            CreateMap<ProizvodiUpdateRequest, Database.Proizvodi>().ForAllMembers(x => x.Condition((src, dest, srcMember) => srcMember != null));
 
             CreateMap<Database.JediniceMjere, JediniceMjere>();
 
